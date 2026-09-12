@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.Flow
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 @Entity(tableName = "diseases")
 data class Disease(
@@ -86,7 +85,7 @@ private data class ApiSource(val name: String?)
 
 private interface NewsApi {
     @GET("v2/top-headlines")
-    suspend fun top(@Query("category") c: String, @Query("apiKey") k: String): NewsResponse
+    suspend fun top(@retrofit2.http.Query("category") c: String, @retrofit2.http.Query("apiKey") k: String): NewsResponse
 }
 
 object NewsRemote {
