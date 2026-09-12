@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.VitaCare" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F6FBF8</item>
+        <item name="android:statusBarColor">#0E9F6E</item>
+    </style>
+</resources>
